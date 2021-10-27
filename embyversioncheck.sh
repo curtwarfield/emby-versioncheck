@@ -1,6 +1,7 @@
 #!/bin/bash
 
 wget --quiet -P /tmp https://github.com/MediaBrowser/Emby.Releases/releases
+
 cat /tmp/releases | grep tree | head -1 | awk '{print $2}' > /tmp/pruned
 sed 's/Emby.Releases//' /tmp/pruned | sed 's/MediaBrowser//' | sed 's/hfer//' | sed 's/tree//' | sed 's/!=//' > /tmp/pruned2
 cat /tmp/pruned2 | sed 's/href=//' > /tmp/pruned3
