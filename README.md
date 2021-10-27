@@ -5,38 +5,35 @@ This bash script that will automatically check for new versions of [Emby Server]
 
 The script makes the following assumptions:
  - You are running your Emby Server on the Linux platform.
- - You have a Pushover account and the Android, IOS, or Desktop application for notifications.
-
+ - You have a Pushover account and the [Android](https://play.google.com/store/apps/details?id=net.superblock.pushover), [IOS](https://apps.apple.com/us/app/pushover-notifications/id506088175?ls=1) or [Desktop](https://pushover.net/clients/desktop) application for notifications.
 ## Usage
 
-Download the script:
+1. Download the script:
 
-`curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master/embyversioncheck.sh`    
+~~~
+curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master/embyversioncheck.sh    
+~~~
 
-Make it executable:
+2. Add your [Pushover](https://pushover.net) `API Token` and `User Key` to the following lines in the script:
 
-`chmod +x embyversioncheck.sh`
+~~~
+  --form-string "token=" " \ 
+  --form-string "user=" " \
+~~~
 
-Then run the script as sudo or root:
+3. Make sure you paste these in between the quotes **" "** and save your changes.
 
-`./anonymousvsftp-install.sh`
+4. Make the script executable:
 
-The installer script configures `/var/ftp/pub` as the default FTP directory. This is the location to store the files that will be available for download.
+~~~
+chmod +x embyversioncheck.sh
+~~~
 
-This is a pre-beta release. New features and enhancements will be introduced in the future.
+5. Run the script:
+~~~
+./embyversioncheck.sh
+~~~
 
-Additional requests are always welcome!
+6. Once you've tested that everything is working as expected you can simply schedule the script to run via [cron](https://en.wikipedia.org/wiki/Cron). 
 
-## Current Feature List
-
-- Installs and configures vsftp as an anonymous FTP server
-- Enables and starts vsftpd
-- Backs up the original vsftpd.conf file
-- Configures a passive port range
-- Configures firewalld
-- Shows the vsftpd status after completion
-
-## Upcoming Feature List
-
-- Check for the presence of vsftp before installation
-- Check for supported distros
+##### Now every time that a new version of [Emby](https://emby.media/) is released you should automatically get a notification!
