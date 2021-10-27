@@ -1,2 +1,2 @@
 # emby.version.check
-Automatically check for new versions of Emby Server and alert via Pushover, LLC
+This bash script that will automatically check for new versions of [Emby Server](https://emby.media/) and then alert you via [Pushover, LLC](https://pushover.net/).
