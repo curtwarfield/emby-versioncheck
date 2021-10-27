@@ -9,10 +9,13 @@ The script makes the following assumptions:
 
 ## Usage
 
-First, grab the script and make it executable:
+Download the script:
 
 `curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master/embyversioncheck.sh`    
-`chmod +x anonymousvsftp-install.sh`
+
+Make it executable:
+
+`chmod +x embyversioncheck.sh`
 
 Then run the script as sudo or root:
 
