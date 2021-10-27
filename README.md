@@ -11,7 +11,7 @@ The script makes the following assumptions:
 
 First, grab the script and make it executable:
 
-`curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master/anonymousvsftp-install.sh`    
+`curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master/embyversioncheck.sh`    
 `chmod +x anonymousvsftp-install.sh`
 
 Then run the script as sudo or root:
