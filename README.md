@@ -5,7 +5,7 @@ This bash script that will automatically check for new versions of [Emby Server]
 
 The script makes the following assumptions:
  - You are running your Emby Server on the Linux platform.
- - You have a Pushover account and the [Android](https://play.google.com/store/apps/details?id=net.superblock.pushover), [IOS](https://apps.apple.com/us/app/pushover-notifications/id506088175?ls=1) or [Desktop](https://pushover.net/clients/desktop) application for notifications.
+ - You have a Pushover account and the [Android](https://play.google.com/store/apps/details?id=net.superblock.pushover), [IOS](https://apps.apple.com/us/app/pushover-notifications/id506088175?ls=1) or [Desktop](https://pushover.net/clients/desktop) application setup for notifications.
 ## Usage
 
 1. Download the script:
