@@ -22,7 +22,7 @@ curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master
   --form-string "user=" " \
 ~~~
 
-3. Make sure you paste these in between the quotes **" "** and save your changes.
+3. Make sure you paste your `API Token` and `User Key` in between the quotes **" "** and save your changes.
 
 4. Make the script executable:
 
