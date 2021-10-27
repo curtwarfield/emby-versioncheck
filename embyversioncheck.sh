@@ -1,4 +1,5 @@
 #!/bin/bash
+
 wget --quiet -P /tmp https://github.com/MediaBrowser/Emby.Releases/releases
 cat /tmp/releases | grep tree | head -1 | awk '{print $2}' > /tmp/pruned
 sed 's/Emby.Releases//' /tmp/pruned | sed 's/MediaBrowser//' | sed 's/hfer//' | sed 's/tree//' | sed 's/!=//' > /tmp/pruned2
@@ -10,8 +11,8 @@ CURRENTVERSION=`cat /var/lib/emby/logs/embyserver.txt | grep "Application versio
 
 if [ "$CURRENTVERSION" != "$LATESTVERSION" ]; then
 curl -s \
-  --form-string "token=" \
-  --form-string "user=" \
+  --form-string "token=" " \
+  --form-string "user=" " \
   --form-string "message=A new version of Emby is now available" \
   https://api.pushover.net/1/messages.json
 fi
