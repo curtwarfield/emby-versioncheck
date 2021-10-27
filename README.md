@@ -21,20 +21,19 @@ curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master
   --form-string "token=" " \ 
   --form-string "user=" " \
 ~~~
+> Make sure you paste your `API Token` and `User Key` in between the quotes **" "** and save your changes.
 
-3. Make sure you paste your `API Token` and `User Key` in between the quotes **" "** and save your changes.
-
-4. Make the script executable:
+3. Make the script executable:
 
 ~~~
 chmod +x embyversioncheck.sh
 ~~~
 
-5. Run the script:
+4. Run the script:
 ~~~
 ./embyversioncheck.sh
 ~~~
 
-6. Once you've tested that everything is working as expected you can simply schedule the script to run via [cron](https://en.wikipedia.org/wiki/Cron). 
+5. Once you've tested that everything is working as expected you can simply schedule the script to run via [cron](https://en.wikipedia.org/wiki/Cron). 
 
 ##### Now every time that a new version of [Emby](https://emby.media/) is released you should automatically get a notification!
