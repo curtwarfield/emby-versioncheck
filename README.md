@@ -1,39 +1,33 @@
-# emby.version.check
-This bash script that will automatically check for new versions of [Emby Server](https://emby.media/) and then alert you via [Pushover, LLC](https://pushover.net/).
+# Emby server version check
 
-## Assumptions
+This `bash` script will automatically check for new versions of the [Emby Server](https://emby.media/) application and then alert you via [Pushover](https://pushover.net/) notification.
 
-The script makes the following assumptions:
- - You are running your Emby Server on the Linux platform.
- - You have a Pushover account and the [Android](https://play.google.com/store/apps/details?id=net.superblock.pushover), [IOS](https://apps.apple.com/us/app/pushover-notifications/id506088175?ls=1) or [Desktop](https://pushover.net/clients/desktop) application setup for push notifications.
+## System requirements
+
+ - You are running **Emby Server** on a `Linux` system.
+ - You already have a **Pushover** account and the [Android](https://play.google.com/store/apps/details?id=net.superblock.pushover), [IOS](https://apps.apple.com/us/app/pushover-notifications/id506088175?ls=1) or [Desktop](https://pushover.net/clients/desktop) application setup for push notifications.
  
 ## Usage
 
-1. Download the script:
-
+1. Download the `bash` script.
 ~~~
 curl -O https://raw.githubusercontent.com/curtwarfield/emby.version.check/master/embyversioncheck.sh    
 ~~~
 
-2. Add your [Pushover](https://pushover.net) `API Token` and `User Key` to the following lines in the script:
-
+2. Add your **Pushover** `API Token` and `User Key` in between the quotes **" "**  in the following lines in the `bash` script:
 ~~~
   --form-string "token=" " \ 
   --form-string "user=" " \
 ~~~
-> Make sure you paste your `API Token` and `User Key` in between the quotes **" "** and save your changes.
 
-3. Make the script executable:
-
+3. Make the `bash` script executable.
 ~~~
 chmod +x embyversioncheck.sh
 ~~~
 
-4. Run the script:
+4. Run the `bash` script.
 ~~~
 ./embyversioncheck.sh
 ~~~
 
-5. Once you've tested that everything is working as expected you can simply schedule the script to run via [cron](https://en.wikipedia.org/wiki/Cron). 
-
-##### Now every time that a new version of [Emby](https://emby.media/) is released you should automatically get a notification!
+5. Schedule the `bash` script to run automatically via a [cron](https://en.wikipedia.org/wiki/Cron) job for what ever frequency you want to check.
