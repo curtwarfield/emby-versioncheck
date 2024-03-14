@@ -8,7 +8,10 @@ cat /tmp/pruned2 | sed 's/href=//' > /tmp/pruned3
 
 LATESTVERSION=`cat /tmp/pruned3 | tr '"////' " " | awk '{print $1}'`
 
-CURRENTVERSION=`cat /var/lib/emby/logs/embyserver.txt | grep "Application version" | awk '{print $7}'`
+CURRENTVERSION=`cat /var/lib/emby/logs/embyserver.txt | grep "Emby Server Version" | awk '{print $8}'`
+
+echo $CURRENTVERSION
+
 
 if [ "$CURRENTVERSION" != "$LATESTVERSION" ]; then
 curl -s \
